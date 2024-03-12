@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -12,24 +15,27 @@
 
         <div class="sidebar">
 
-            <div class="logo">Dashboard</div>
+            <div class="logo">
+                <img class="logo-icon" src="images/gnome.svg" alt="">
+                <span>Dashboard</span>
+            </div>
 
             <div class="menu">
                 <ul>
-                    <li>Home</li>
-                    <li>Profile</li>
-                    <li>Messages</li>
-                    <li>History</li>
-                    <li>Tasks</li>
-                    <li>Community</li>
+                    <li><img class="side-icon" src="images/home-circle.svg" alt=""><button class="menu-button">Home</button></li>
+                    <li><img class="side-icon" src="images/account.svg" alt=""><button class="menu-button">Profile</button></li>
+                    <li><img class="side-icon" src="images/message.svg" alt=""><button class="menu-button">Messages</button></li>
+                    <li><img class="side-icon" src="images/history.svg" alt=""><button class="menu-button">History</button></li>
+                    <li><img class="side-icon" src="images/format-list-checks.svg" alt=""><button class="menu-button">Tasks</button></li>
+                    <li><img class="side-icon" src="images/account-group.svg" alt=""><button class="menu-button">Communities</button></li>
                 </ul>
             </div>
 
             <div class="menu2">
                 <ul>
-                    <li>Settings</li>
-                    <li>Suuport</li>
-                    <li>Privacy</li>
+                    <li><img class="side-icon" src="images/cog.svg" alt=""><button class="menu-button">Settings</button></li>
+                    <li><img class="side-icon" src="images/head-question-outline.svg" alt=""><button class="menu-button">Suuport</button></li>
+                    <li><img class="side-icon" src="images/security.svg" alt=""><button class="menu-button">Privacy</button></li>
                 </ul>
             </div>
 
@@ -46,7 +52,7 @@
             <div class="search-right">
 
                 <img class="icon" src="images/bell-ring-outline.svg" alt="">
-                <img class="reddit" src="images/reddit.png" alt="">
+                <img class="reddit" src="images/punk6.png" alt="">
                 <h2 class="morgan">Morgan Oakley</h2>
 
             </div>
@@ -58,16 +64,16 @@
 
             <div class="nav-left">
 
-                <img class="reddit2" src="images/reddit.png" alt="">
-                <p>Hi there,</p>
+                <img class="reddit2" src="images/punk6.png" alt="">
+                <p class="hi">Hi there,</p>
                 <h2 class="greeting">Morgan Oakley (@morgan)</h2>
 
             </div>
 
             <div class="buttons">
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+                <button class="nav-button">New</button>
+                <button class="nav-button">Upload</button>
+                <button class="nav-button">Share</button>
             </div>
 
         </div>
@@ -77,28 +83,58 @@
             <h3 class="your-projects">Your Projects</h3>
 
             <div class="card">
-                <p class="title">Article Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <p class="title">Super Cool Project</p>
+                <p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <div class="card-icons">
+                    <img class="star" src="images/star-plus-outline.svg" alt="">
+                    <img class="eye" src="images/eye-plus-outline.svg" alt="">
+                    <img class="fork" src="images/source-fork.svg" alt="">
+                </div>
               </div>
               <div class="card">
-                <p class="title">Article Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <p class="title">Less Cool Project</p>
+                <p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <div class="card-icons">
+                    <img class="star" src="images/star-plus-outline.svg" alt="">
+                    <img class="eye" src="images/eye-plus-outline.svg" alt="">
+                    <img class="fork" src="images/source-fork.svg" alt="">
+                </div>
               </div>
               <div class="card">
-                <p class="title">Article Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <p class="title">Impossible App</p>
+                <p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <div class="card-icons">
+                    <img class="star" src="images/star-plus-outline.svg" alt="">
+                    <img class="eye" src="images/eye-plus-outline.svg" alt="">
+                    <img class="fork" src="images/source-fork.svg" alt="">
+                </div>
               </div>
               <div class="card">
-                <p class="title">Article Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <p class="title">Easy Peasy App</p>
+                <p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <div class="card-icons">
+                    <img class="star" src="images/star-plus-outline.svg" alt="">
+                    <img class="eye" src="images/eye-plus-outline.svg" alt="">
+                    <img class="fork" src="images/source-fork.svg" alt="">
+                </div>
               </div>
               <div class="card">
-                <p class="title">Article Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <p class="title">Ad Blocker</p>
+                <p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <div class="card-icons">
+                    <img class="star" src="images/star-plus-outline.svg" alt="">
+                    <img class="eye" src="images/eye-plus-outline.svg" alt="">
+                    <img class="fork" src="images/source-fork.svg" alt="">
+                </div>
               </div>
               <div class="card">
-                <p class="title">Article Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <p class="title">Money Maker</p>
+                <p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                <div class="card-icons">
+                    <img class="star" src="images/star-plus-outline.svg" alt="">
+                    <img class="eye" src="images/eye-plus-outline.svg" alt="">
+                    <img class="fork" src="images/source-fork.svg" alt="">
+                </div>
               </div>
 
         </div>
@@ -107,18 +143,54 @@
 
             <h3 class="announcements">Announcements</h3>
 
-            <div class="card">
-                <p class="title">Article Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+            <div class="card-right">
+                <p class="title2">Site Maintenance</p>
+                <p class="info2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...</p>
+                <hr>
+                <p class="title2">Community Share Day</p>
+                <p class="info2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...</p>
+                <hr>
+                <p class="title2">Updated Privacy Policy</p>
+                <p class="info2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...</p>
             </div>
 
             <h3 class="trending">Trending</h3>
 
-            <div class="card">
-                <p class="title">Article Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
-            </div>
+            <div class="card-trending">
 
+                <div class="profiles">
+                    <img class="pfp" src="images/punk1.png" alt="">
+                    <div class="profile-text">
+                        <p>@felix</p>
+                        <p>Really Nice Guy</p>
+                    </div>
+                </div>
+
+                <div class="profiles">
+                    <img class="pfp" src="images/punk2.png" alt="">
+                    <div class="profile-text">
+                        <p>@bob</p>
+                        <p>The Goat</p>
+                    </div>
+                </div>
+
+                <div class="profiles">
+                    <img class="pfp" src="images/punk4.avif" alt="">
+                    <div class="profile-text">
+                        <p>@creepermccreepski</p>
+                        <p>Kids PE Teacher</p>
+                    </div>
+                </div>
+
+                <div class="profiles">
+                    <img class="pfp" src="images/punk5.png" alt="">
+                    <div class="profile-text">
+                        <p>@doodoo</p>
+                        <p>Thinks He's Hot Sh*t</p>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 

@@ -1,0 +1,653 @@
+<!doctype html> <html> <head>
+<!--
+███╗░░░███╗███████╗██████╗░██╗░█████╗░██╗░░░░░░█████╗░██████╗░ 
+████╗░████║██╔════╝██╔══██╗██║██╔══██╗██║░░░░░██╔══██╗██╔══██╗
+██╔████╔██║█████╗░░██║░░██║██║███████║██║░░░░░███████║██████╦╝
+██║╚██╔╝██║██╔══╝░░██║░░██║██║██╔══██║██║░░░░░██╔══██║██╔══██╗
+██║░╚═╝░██║███████╗██████╔╝██║██║░░██║███████╗██║░░██║██████╦╝
+╚═╝░░░░░╚═╝╚══════╝╚═════╝░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═════╝░
+Hi there, curious developer!. 
+Interested in working with a growing company with a startup vibe. 
+Visit: aHR0cHM6Ly93d3cubWVkaWFsYWIubGEvbGV2ZXItc2l0ZS1vcGVuaW5ncwo=
+-->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="//wa1.aminoapps.com/static/dist/js/main.6eaed38cd.js" as="script"/>
+ <title>♫ toby ♫ | Cartoon Amino</title>  <meta name="description" content="The dream land of the committed cartoon lovers"> <meta property="description" content="The dream land of the committed cartoon lovers"/> <meta property="og:description" content="The dream land of the committed cartoon lovers"/>   <meta name="keyword" content="Steven Universe,Rick and Morty,familly,TV,shows,cartoons,Cartoon Network,Art,Disney,Animation"/>  <meta property="og:title" content="♫ toby ♫ | Cartoon Amino"/> <meta property="og:site_name" content="Cartoon | aminoapps.com"/>  <meta property="og:image" content="http://static.aminoapps.com/default-assets/x58_icon_00.png"/> <meta property="twitter:image" content="http://static.aminoapps.com/default-assets/x58_icon_00.png"/> <meta property="shareaholic:image" content="http://static.aminoapps.com/default-assets/x58_icon_00.png"/>  <meta name="theme-color" content="hsla(215, 100%, 52%, 1.000000)"/> 
+    <link rel="shortcut icon" href="//wa1.aminoapps.com/static/img/favicon.ico?v=1">
+        <link rel="canonical" href="https://aminoapps.com/c/cartoon/page/user/toby/r0jU_BfNjGnb0jKYp1GrJ6v6kbM2VvHZ">
+ <meta name="apple-itunes-app" content="app-id=1115565187, app-argument=`narviiapp://x58/description`"> <link rel="manifest" href="https://aminoapps.com/android-manifest.json?deeplink=narviiapp%3A//x58/description">     <meta name="google-site-verification" content="G2Jidij179lrEgjO93rItrGLc2gnRoT7_HkXK0v8OgE" />
+    <!-- ANA SDK needs to be loaded before Carbon -->
+    <script async src="https://js.media-lab.ai/wana.4.3.2.js"></script>
+<script type='text/javascript'>
+    // window.ana_debug = true;
+
+    /**
+     * Returns the first child of an HTML element
+     * @param {Element} element
+     */
+    function getFirstChild(element) {
+        return element.children[0];
+    }
+
+    document.addEventListener('ANAReady', () => {
+        wanaLoad();
+    });
+
+    const wanaLoad = () => {
+        const gptOptions = {
+            enableSingleRequest: true,
+            sandboxIframe: true,
+            collapseEmptyDivs: false,
+            globalTargeting: {
+                'domain': window.location.hostname,
+                'youtube': 'n',
+            },
+        };
+
+        window.ANAWeb = new ANAWeb({ gptOptions });
+    }
+
+    /**
+     * Creates an Assembly ad slot
+     * @deprecated Use createAssemblyAdSlot instead.
+     * By passing an object as parameter instead of individual paramenters, you can
+     * easily extend, remove or change the parameters by adding, removing or changing
+     * new keys to the object.
+     */
+    const createSlot = (slotName, elementID, adUnitID, dimensions, refresh = false, maxWidth = undefined) => {
+        return window.ANAWeb.createSlot(SlotTypeEnum.GOOGLE, {
+            elementID,
+            adUnitID,
+            dimensions,
+            collapseBeforeFill: false,
+            collapseIfNoFill: false,
+        }).then((slot) => {
+            window[slotName] = slot;
+            slot.refresh();
+
+            if (refresh) {
+                refreshInterval(slotName, maxWidth);
+            }
+        });
+    }
+
+    /**
+     * Creates an Assembly ad slot.
+     * @see https://whisper.atlassian.net/wiki/spaces/ASTI/pages/4972118021/2.0.12#createSlot(slotType%2C-slotOptions)-BannerSlot
+     * @param { Object } options
+     * @param { string } options.slotName A reference of the slot created is stored under window with the slotName as key
+     * @param { string } options.elementID The ID of the HTML element the ad created will be placed
+     * @param { string } options.adUnitID The GAM ad unit id, eg: `/114106652/wshh_desktop_hp_btf_3`
+     * @param { number[][] } options.dimensions Array of arrays to map to supported sizes
+     * @param { boolean | undefined } options.refresh If true, the refresh function will be executed for the given slot
+     * @param { number | undefined } options.maxWidth ???
+     * @param { boolean | undefined } options.collapseBeforeFill If true the element will remain collapsed unless the ad fills
+     * @param { boolean | undefined } options.collapseIfNoFill If true the the element will collapse if the ad attempt does not fill
+     */
+    function createAssemblyAdSlot(options) {
+        const {
+            slotName,
+            elementID,
+            adUnitID,
+            dimensions,
+            refresh = false,
+            maxWidth = undefined,
+            collapseBeforeFill = false,
+            collapseIfNoFill = false,
+        } = options;
+
+        if (!slotName || typeof slotName !== "string") {
+            throw new Error('slotName (string) is required');
+        }
+
+        if (!elementID || typeof elementID !== "string") {
+            throw new Error('elementID (string) is required');
+        }
+
+        if (!adUnitID || typeof adUnitID !== "string") {
+            throw new Error('adUnitID (string) is required');
+        }
+
+        if (!dimensions || !Array.isArray(dimensions)) {
+            /** @TODO Probably we should do a better validation here */
+            throw new Error('dimensions (number[][]) is required');
+        }
+
+        return window.ANAWeb.createSlot(SlotTypeEnum.GOOGLE, {
+            elementID,
+            adUnitID,
+            dimensions,
+            collapseBeforeFill,
+            collapseIfNoFill,
+        }).then((slot) => {
+            window[slotName] = slot;
+            slot.refresh();
+
+            //window.ANAWeb.refreshAllGoogleSlots();
+
+            if (refresh) {
+                refreshInterval(slotName, maxWidth);
+            }
+        });
+    }
+
+    const createMobileSlots = () => {
+        var adBlockContainers = [...document.getElementsByClassName("ad-block-container-mobile")];
+        adBlockContainers.forEach((container, index) => {
+            const element = getFirstChild(container);
+
+            if (element.id === `slot-mobile-${index}`) {
+                return;
+            }
+
+            element.id = `slot-mobile-${index}`;
+            element.style.textAlign = 'center';
+
+            window.createSlot(`slotMobile${index}`, `slot-mobile-${index}`, '/114106652/amino_300x250_atf_mw', [[300, 250], [300, 600]]);
+        });
+    }
+
+    /**
+     * Create ad slots for ad containers between posts items in the Community feed.
+     */
+    function fillInBetweenPostsAdSlots() {
+        var slotContainers = [...document.getElementsByClassName("post-list-item--desktop-ad")];
+
+        slotContainers.forEach((container, index) => {
+            const element = getFirstChild(container);
+            const elementID = `slot-desktop-${index}`;
+
+            // If the slot is already created, skip it.
+            if (element.id === elementID) {
+                return;
+            }
+
+            element.id = elementID;
+            element.style.textAlign = "center";
+            const adUnitID = "/114106652/amino_desktop_728x90";
+            const adDimensions = [[728, 90], [970, 250], [970, 90], [960, 250], [300, 250]];
+
+            window.createAssemblyAdSlot({
+                slotName: `slotDesktop${index}`,
+                elementID,
+                adUnitID,
+                dimensions: adDimensions,
+                collapseBeforeFill: false,
+                collapseIfNoFill: false,
+                refresh: true,
+            });
+        })
+    }
+
+    window.createSlot = createSlot;
+    window.createAssemblyAdSlot = createAssemblyAdSlot;
+    window.createMobileSlots = createMobileSlots;
+    window.fillInBetweenPostsAdSlots = fillInBetweenPostsAdSlots;
+
+    const refreshInterval = (slotName, maxWidth) => {
+        window[`${slotName}Refresh`] = setInterval(() => {
+            if (maxWidth && window.innerWidth < maxWidth) {
+                return;
+            }
+
+            window[slotName].refresh();
+        }, 10000);
+    };
+
+    // Every debounce needs to have it's method because of overplapping
+    const scrollListener = (className, id) => window.addEventListener("scroll", () => {
+        if (id === 'slot-right-aside') {
+            return debounceInvokeRight(className, id);
+        }
+
+        debounceInvoke(className, id);
+    }, { passive: true });
+
+    const isInViewport = (element, topAdd = false) => {
+        const rect = element.getBoundingClientRect();
+
+        if (topAdd) {
+            return (rect.bottom >= 50);
+        }
+
+        return (
+            // header height is approx. 50px;
+            rect.top >= 50 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    const debounce = (func, wait) => {
+        let timeout;
+
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    };
+
+    const debounceInvoke = debounce(function (className, id) {
+        runOnScroll(className, id);
+    }, 1000);
+
+    const debounceInvokeRight = debounce(function (className, id) {
+        runOnScroll(className, id);
+    }, 1000);
+
+    const runOnScroll = (className, id) => {
+        const elementsWithGivenClass = document.getElementsByClassName(className);
+
+        for (let i = 0; i < elementsWithGivenClass.length; i++) {
+            const element = elementsWithGivenClass[i];
+
+            if (isInViewport(element)) {
+                if (getFirstChild(element).id === id) {
+                    break;
+                }
+
+                let itemToMove;
+                let placeToMove;
+
+                [...elementsWithGivenClass].find((item, index) => {
+                    if (getFirstChild(item).id === id) {
+                        itemToMove = item;
+                        placeToMove = index;
+                    }
+                });
+
+                element.appendChild(getFirstChild(itemToMove));
+
+                itemToMove.appendChild(getFirstChild(element));
+
+                getFirstChild(element).style.display = "none";
+
+                if (id === 'slot-right-aside') {
+                    clearInterval(window.slotRightAsideRefresh);
+                    refreshInterval('slotRightAside', 1207);
+                    window.slotRightAside.refresh();
+                }
+
+                if (id === 'slot-banner') {
+                    window.slotBanner.refresh();
+                }
+            }
+        }
+    };
+
+    window.scrollListener = scrollListener;
+    window.isInViewport = isInViewport;
+</script>
+    <!-- Carbon Analytics -->
+<!-- From docs: For best results and full compatibility, we recommend that the tag is deployed as early as possible in the <head> of each page.
+-->
+
+<!-- Carbon Analytics -->
+<script>
+    !function(a,l,b,c,k,s,t,g,A){a.CustomerConnectAnalytics=k,a[k]=a[k]||function(){
+        (a[k].q=a[k].q||[]).push(arguments)},g=l.createElement(b),A=l.getElementsByTagName(b)[0],
+        g.type="text/javascript",g.async=!0,g.src=c+"?id="+s+"&parentId="+t,A.parentNode.insertBefore(g,A)
+    }(window,document,"script","//carbon-cdn.ccgateway.net/script","cca",window.location.hostname,"e8a16a4090");
+</script>
+<!-- END Carbon Analytics -->
+
+<!-- GAM Publisher Tag Setup -->
+<script>
+    document.addEventListener('ANAReady', () => {
+        !function(t, gt){
+            gt = t || {};
+            gt.cmd = t.cmd || [];
+            gt.cmd.push(function () {
+                if (gt.pubads().getTargeting('carbon_segment').length === 0) {
+                    var carbon = JSON.parse(window.localStorage.getItem('ccRealtimeData'));
+                    gt.pubads().setTargeting('carbon_segment', carbon ? carbon.audiences.map(function (i){ return i.id; }) : []);
+                }
+                if (gt.pubads().getTargeting('cc-iab-class-id').length === 0) {
+                    var iabIds = JSON.parse(window.localStorage.getItem('ccContextualData'));
+                    gt.pubads().setTargeting('cc-iab-class-id', iabIds);
+                }
+            });
+        }(window.googletag);
+    });
+</script>
+<!-- END GAM Publisher Tag Setup -->
+            <link rel="stylesheet" href="//wa1.aminoapps.com/static/dist/css/desktop-style.74dc4607d.css">
+            <link rel="stylesheet" href="//wa1.aminoapps.com/static/dist/css/misc-desktop-style.54a891d82.css">
+
+
+          <script>
+            window.ServerData = window.ServerData || {};
+        </script>
+  <style type="text/css" class="custom">
+    body { --community-color: hsla(215, 100%, 64%, 1.000000); }
+    .community-bg { background-color: hsla(215, 100%, 64%, 1.000000); }
+    .community-color, .community-color:hover, .community-color:visited, .community-color:link, .community-color:active {
+        color: hsla(215, 100%, 64%, 1.000000); }
+    .community-bg-dark { background-color: hsla(215, 100%, 52%, 1.000000); }
+    .community-color-dark, .community-color-dark:hover, .community-color-dark:visited, .community-color-dark:link, .community-color-dark:active { color: hsla(215, 100%, 52%, 1.000000); }
+    *::selection { background: hsla(215, 100%, 64%, 1.000000); color: white; }
+
+    </style>  <style>
+    @media (min-width: 1206px) {
+        section.global-body {
+            max-width: 1186px;
+        }
+
+        .home-section-nav .home-fixed-container {
+            max-width: 577px;
+        }
+
+        .global-header>.content .container {
+            max-width: 1186px;
+        }
+
+        section.post-list.new-post-list>.list-item {
+            max-width: 280px;
+        }
+    }
+
+    @media (min-width: 1493px) {
+        section.global-body {
+            max-width: 1483px;
+        }
+
+        .home-section-nav .home-fixed-container {
+            max-width: 873px;
+        }
+
+        .global-header>.content .container {
+            max-width: 1483px;
+        }
+    }
+</style>         <script type="application/ld+json">{"@context": "http://schema.org", "@type": "Article", "headline": "\u266b toby \u266b", "image": {"@type": "ImageObject", "url": "http://pm1.aminoapps.com/8147/7e93d85dc12819cafcf8f37e7906fd37376b5da3r1-320-320v2_00.jpg"}}</script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "22489583" });
+
+    (function () {
+        var s = document.createElement("script");
+        var el = document.getElementsByTagName("script")[0];
+
+        s.async = true;
+        s.src = "https://sb.scorecardresearch.com/cs/22489583/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script> <noscript>
+    <img src=https://sb.scorecardresearch.com/p?c1=2&amp;c2=22489583&amp;cv=3.6.0&amp;cj=1>
+</noscript></head>
+<body class="community-profile-body  not-mobile "
+      data-vce="body"
+>
+<div id="top"></div>
+    <!-- This space will be replaced in v2/pages/home.html by a block with the same name -->
+
+<header class="global-header">
+    <div class="content community-bg">
+        <div class="container">
+ <nav class="global-nav "> <ul class="content">  <li class="nav-item nav-search"> <div class="nav-search-container global-dropdown-anchor " data-vce="search-btn" data-always-open="false"> <form class="search-input-container"> <input maxlength="50" autocomplete="false" class="nav-search-input" type="search" placeholder="Search Amino" value="" required /> <div class="clear-button"> <i class="amino-icon amino-icon-x"></i> </div> <span class="cancel-search">Cancel</span> </form> <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" class="svg-icon amino-icon amino-icon-search" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(.8 .6)" fill-rule="evenodd"><path d="M9.902 17.457c-4.128 0-7.5-3.372-7.5-7.5 0-4.129 3.372-7.501 7.5-7.501 4.129 0 7.501 3.372 7.501 7.5 0 4.129-3.372 7.501-7.5 7.501zm7.799-1.43a9.883 9.883 0 0 0 2.13-6.124C19.832 4.453 15.38 0 9.903 0 4.425 0 0 4.452 0 9.903c0 5.45 4.452 9.902 9.902 9.902a9.998 9.998 0 0 0 6.125-2.132l5.963 5.963 1.7-1.7-5.99-5.908z"/></g></svg> <div class="global-dropdown-container search-dropdown-container amino-logo-animation"></div> </div> </li>  <li class="nav-item"> <a class="nav-link block" href="https://aminoapps.com/explore/" title="Explore" data-refer-type="site_navbar_icon_explore" >  <svg width="25" height="25" class="explore-icon svg-icon amino-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g fill-rule="evenodd"><g transform="translate(.6 .8)"><path d="M12 21.666c-5.33 0-9.666-4.336-9.666-9.666S6.67 2.334 12 2.334 21.666 6.67 21.666 12 17.33 21.666 12 21.666m8.482-18.144l-.004-.004C18.182 1.25 15.171 0 12 0 5.383 0 0 5.383 0 12c0 3.171 1.25 6.182 3.522 8.482C5.818 22.75 8.829 24 12 24c3.17 0 6.182-1.25 8.482-3.522C22.75 18.182 24 15.171 24 12c0-3.17-1.25-6.182-3.518-8.478"/></g><path d="M13.4 14.4c-.897 0-1.6-.527-1.6-1.2 0-.673.703-1.2 1.6-1.2.897 0 1.6.527 1.6 1.2 0 .673-.703 1.2-1.6 1.2m6.197-6.99a.838.838 0 0 0-.967-.101l-7.287 3.697-4.23 6.391c-.175.286-.148.62.09.823.147.13.322.18.529.18a.743.743 0 0 0 .411-.102l7.314-3.697 4.23-6.368c.175-.282.148-.615-.09-.823"/></g></svg>  <span class="nav-text">Explore</span> </a> </li>  <li class="nav-item nav-user less-margin">  <a class="nav-link block pointer" data-vce="btn-popup" data-popup="login" data-popup-close-by-overlay="1" data-popup-source="Top Nav" data-event-category="Sign In Popup" data-event-label="top_nav" data-tea-event="sign_in_popup" data-tea-source="Top Nav" > Sign In </a>  </li>  <li class="nav-item nav-download"> <a class="btn btn-download community-color" href="/get/amino/" data-event-category="NavBar Get App"> Get App </a> </li>  </ul> </nav>            <div class="amino-logo-container">
+                <a class="amino-logo" href="https://aminoapps.com" data-refer-type="site_navbar_amino_logo">
+                        <img src="//wa1.aminoapps.com/static/img/amino-logo-white.svg?v=2" class="logo">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- This space will be replaced in v2/pages/home.html by a block with the same name -->
+
+
+
+<section class="global-body">
+ <section class="community-content"> <nav class="home-section-nav" data-vce="community-nav"> <div class="home-fixed-container"> <a class="home-nav-home community-color" href="/c/cartoon/home/" data-refer-type="community_nav_home" > <i class="amino-icon amino-icon-home"></i> </a> <ul class="unstyled content" data-vce="headroom" data-headroom-offset="200">  <li class="section-item  community-color "> <a class="block" href="/c/cartoon/" data-refer-type="community_nav"> <i class="amino-icon amino-icon-star"></i> <span class="label">Featured</span> </a> </li>  <li class="section-item  community-color "> <a class="block" href="/c/cartoon/recent/" data-refer-type="community_nav"> <i class="amino-icon amino-icon-clock"></i> <span class="label">Latest</span> </a> </li>  <li class="section-item  community-color "> <a class="block" href="/c/cartoon/wiki/" data-refer-type="community_nav"> <i class="amino-icon amino-icon-favs"></i> <span class="label">Wiki</span> </a> </li>  <li class="section-item  community-color "> <a class="block" href="/c/cartoon/polls/" data-refer-type="community_nav"> <i class="amino-icon amino-icon-poll"></i> <span class="label">Polls</span> </a> </li>  <li class="section-item  community-color "> <a class="block" href="/c/cartoon/quizzes/" data-refer-type="community_nav"> <i class="amino-icon amino-icon-quiz"></i> <span class="label">Quizzes</span> </a> </li>  <li class="section-item  community-color "> <a class="block" href="/c/cartoon/shared-folder/" data-refer-type="community_nav"> <i class="amino-icon amino-icon-folder"></i> <span class="label">Shared Folder</span> </a> </li>  <li class="section-item  community-color  hide-on-mobile"> <a class="block" href="/c/cartoon/info/" data-refer-type="community_nav"> <i class="amino-icon amino-icon-info"></i> <span class="label">About</span> </a> </li>  <li class="section-item"></li> <li class="section-item"></li> </ul>  <a class="overflow-hint" href="javascript:void(0);" data-tea-event="community_nav_scroll" data-tea-type="Next" data-event-category="Community Nav Scroll" data-event-action="next"> <i class="amino-icon amino-icon-rightward community-color"></i> </a>  </div> </nav>  <section class="main-page content user-normal"> <div class="ad-block-banner-container" style="min-height: 90px;"> <section class="ad-block" style="width:728px; min-height:90px;"> </section> </div> <script type='text/javascript'>
+    document.getElementsByClassName("ad-block-banner-container")[0].children[0].id = 'slot-banner';
+
+
+    document.addEventListener('ANAReady', () => {
+        if (window.innerWidth > 1490) {
+            const adUnitID = '/114106652/amino_728x90_atf_desktop_1';
+            const adDimensions = [[728, 90], [970, 250], [970, 90], [960, 250], [300, 250]];
+            const elementID = 'slot-banner';
+            const slotName = 'slotBanner';
+
+            if (window[slotName]) {
+                return;
+            }
+
+            window.createAssemblyAdSlot({
+                slotName,
+                elementID,
+                adUnitID,
+                dimensions: adDimensions,
+                collapseBeforeFill: true,
+                collapseIfNoFill: true,
+                refresh: false,
+            });
+        }
+    });
+</script>   <article class="post main-post user-profile-page">  <div class="user-canopy community-bg j-followee-number-container">   <div class="user-header hide-blocker" data-vce="fade-image-switcher" data-author-uid="2b08d87f-bf32-40b1-a013-0ac69e6c45ee"> <img class="switch show img-cover" src="//pm1.aminoapps.com/8147/7e93d85dc12819cafcf8f37e7906fd37376b5da3r1-320-320v2_hq.jpg" alt="user selected cover"/>  </div>  <div class="user-profile"> <a class="user-link"  href="https://aminoapps.com/c/cartoon/page/user/toby/Z6BH_nfBklXm0kprn7l5DwJwamWdvJ"  data-refer-type="user_profile_page"> <img class="user-avatar img-cover" data-vce="image"  src="//pm1.aminoapps.com/8147/7e93d85dc12819cafcf8f37e7906fd37376b5da3r1-320-320v2_128.jpg" /> </a>  <h1 class="user-name"> <a class="link"  href="https://aminoapps.com/c/cartoon/page/user/toby/Z6BH_nfBklXm0kprn7l5DwJwamWdvJ"  data-vce="rich-content" data-refer-type="user_profile_page"> <span class="user-name-truncate">  ♫ toby ♫  </span>  </a> </h1>  <div class="user-ranking"> <i class="level-badge level-badge-3"></i> <div class="reputation-bar"> Ciphers <span class="rank-progress" style="width:27.7333333333px"></span> </div> </div> </div>   <div class="user-interaction hide-blocker hide-blocked" data-author-uid="2b08d87f-bf32-40b1-a013-0ac69e6c45ee">   <a class="follow-btn pointer block"  data-login-motivation="Sign in to follow ♫ toby ♫." data-vce="pre-login-btn" data-true-form="user/follow-btn" data-join-icons="//pm1.aminoapps.com/8147/7e93d85dc12819cafcf8f37e7906fd37376b5da3r1-320-320v2_128.jpg" data-join-motivation="follow-pc" data-event-label="follow" data-source="Follow"  data-follow-event-label="profile_page" data-followee="2b08d87f-bf32-40b1-a013-0ac69e6c45ee" data-follower="" > <span class="following"> <i class="follow-icon"></i> Following </span> <span class="friends"> <i class="follow-icon"></i> Friends </span> <span class="stranger"> <i class="follow-icon fa fa-plus"></i> Follow </span> <span class="unfollow"> Unfollow </span> <i class="fa fa-circle-o-notch fa-spin"></i> </a><a class="action-btn plain pointer"  data-vce="pre-login-btn" data-source="Start 1-1 Chat" data-login-motivation="Sign in to chat with ♫ toby ♫." data-true-form="user/chat-btn" data-join-icons="//pm1.aminoapps.com/8147/7e93d85dc12819cafcf8f37e7906fd37376b5da3r1-320-320v2_128.jpg" data-join-motivation="private-chat" data-event-label="start_1-1_chat"  data-uid="2b08d87f-bf32-40b1-a013-0ac69e6c45ee" data-chat-privilege="1" data-follow-status="0" data-disabled-text="This member has disabled chat invite requests." data-invite-text="Send Chat Invite" data-placeholder-text="Invite message (optional)" data-send-text="Send" >  <span class="normal-text"> <img class="chat-icon" src="//wa1.aminoapps.com/static/img/chat-icon.svg"/> Chat </span> <i class="fa fa-circle-o-notch fa-spin"></i> </a> </div>  <div class="counter-info hide-blocker" data-author-uid="2b08d87f-bf32-40b1-a013-0ac69e6c45ee"> <div class="counter rep"> <div class="number">11</div> <div class="label">Reputation</div> </div> <div class="counter following"> <div class="number">41</div> <div class="label">Following</div> </div> <div class="counter followers"> <div class="number j-followee-number-target">12</div> <div class="label">Followers</div> </div> </div> <div class="counter-info-backdrop hide-blocker" data-author-uid="2b08d87f-bf32-40b1-a013-0ac69e6c45ee"></div>  </div>   <section class="user-bio hide-blocker" data-author-uid="2b08d87f-bf32-40b1-a013-0ac69e6c45ee"> <header class="title"> <h3 class="title community-color">  Bio  <time class="muted date">Since Jul 2020 (3 Years 246 Days)</time>  </h3> </header> <div class="bio-body overflowing" data-vce="toggle-content" data-threshold="350">  <div class="empty-content muted">Seems like this user has nothing to say about themself.</div>  </div> </section>   <section class="user-posts hide-blocker" data-vce="tab" data-author-uid="2b08d87f-bf32-40b1-a013-0ac69e6c45ee"> <header class="title"> <h3 class="title community-color tab-toggles"> <a class="tab-toggle active" href="javascript:void 0;"> Posts </a> <a class="tab-toggle" href="javascript:void 0; "> Wall (1)</a> </h3> </header> <div class="tab-pane active">    <section class="post-list new-post-list" data-vce="list" data-list-name="post-list" data-max-page="2" data-cur-page="1" data-read-more="100" data-base="/c/cartoon/page/user/toby/Z6BH_nfBklXm0kprn7l5DwJwamWdvJ">   <div class="paginator">  <a class="page" href="/c/cartoon/page/user/toby/Z6BH_nfBklXm0kprn7l5DwJwamWdvJ?page=2"> <i class="fa fa-forward"></i> Next Page </a> </div>   </section> </div> <div class="tab-pane">   <a name="comment-list"></a> <section class="comment-list" data-vce="live-comment" data-live-comment-disabled="True" data-target-ndc-id="58"  data-target-post-type="user" data-target-post-id="2b08d87f-bf32-40b1-a013-0ac69e6c45ee" data-target-log-type="profile" > <h3 class="title community-color">  Comment  </h3> <div class="content"  data-vce="comment-area">  <div class="load-comment-indicator"> <i class="fa fa-spin fa-circle-o-notch"></i> </div> <section class="comment-input-bar main" data-vce="comment-input-bar"  data-join-icons="//pm1.aminoapps.com/8147/7e93d85dc12819cafcf8f37e7906fd37376b5da3r1-320-320v2_128.jpg" data-join-deeplink="narviiapp://x58/user-profile/2b08d87f-bf32-40b1-a013-0ac69e6c45ee" data-join-motivation="reply" data-source="Comment Reply"  data-success-redirect data-event-label="comment_new" >  <img class="user-icon" src="//wa1.aminoapps.com/static/img/user-icon-placeholder.png"/>  <textarea name="content" placeholder="Say something…" readonly maxlength="5000"></textarea> <button class="pointer btn btn-send community-bg" disabled> <i class="amino-icon amino-icon-send"></i> <i class="fa fa-spin fa-spinner"></i> </button> </section>     <article class="comment rich-content mutual-block main" data-comment-id="37383ac8-0a45-467f-b688-7bdbae97b961" data-author-name="Pearl The Last Gembender" > <a name="comment-37383ac8-0a45-467f-b688-7bdbae97b961" style="margin-top: -150px"></a> <div class="content"> <a class="block avatar-aside" href="https://aminoapps.com/c/cartoon/page/user/pearl-the-last-gembender/vd7I_2fNogvgvPKb83YKNWKg1q3gMbK" >  <img class="avatar" data-vce="image"  src="//pm1.aminoapps.com/7791/b2d936d73728a3604a7cb8c4f00218c41f4d8a54r1-390-390v2_128.jpg"  >  </a> <div class="main" data-vce="rich-content"> <div class="info"> <a class="nickname" href="https://aminoapps.com/c/cartoon/page/user/pearl-the-last-gembender/vd7I_2fNogvgvPKb83YKNWKg1q3gMbK"  >  <span class="content">Pearl The Last Gembender</span>  <i class="level-badge level-badge-17"></i>   </a>  </div>  <div class="content overflowing " data-vce="toggle-content" data-threshold="85" data-success-redirect data-additional-logic="join" >  <div class="comment-text article"><p class="center bolder">━━━━━━༻❁༺━━━━━━</p><p></p><p class="center">Hey there, I'm Pearl!</p><p class="center">Nice to meet you :3 Cartoon Amino is a place where you're supposed to have fun! You can do that by talking to new people, make blogs and just socialize around the app!</p><p class="center">Now for some tips and info --&gt;</p><p></p><p class="center">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p><p></p><p class="center">Here’s a challenge for you to get your journey started in an awesome way. This way people will get to know you a little better!</p><p class="center"><a href="http://aminoapps.com/p/rxdzd5" >Introduction Challenge</a></p><p class="center">You could also start with writing yourself a bio where you can tell a little about yourself, list your favorite cartoons, animated movies, hobbies etc :3</p><p></p><p class="center">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p><p></p><p class="center">If you need any help or have any questions or issues, you can always contact one of our leaders or curators by pm!</p><p class="center underline">Also remember to check out the “Guidelines” to learn what’s allowed and what’s not allowed to post here! :wink: </p><p></p><p class="center">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p><p></p><p class="center">Here’s a link to a “<a href="http://aminoapps.com/p/baialw" >New members chat</a>” and <a href="http://aminoapps.com/p/9cs5i3" >http://aminoapps.com/p/9cs5i3</a> where you can start your first socializing with other new members. And don’t be afraid to start a conversation :smile: </p><p></p><p class="center">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p><p></p><p class="center"><a href="http://aminoapps.com/p/6gof1p" >☆How do I Cartoon Amino☆</a></p><p class="center"><a href="http://aminoapps.com/p/z9r8op" >☆No Anime and what’s allowed☆</a></p><p></p><p class="center bolder">‧̍̊·̊‧̥°̩̥˚̩̩̥͙°̩̥‧̥·̊‧̍̊ ♡ °̩̥˚̩̩̥͙°̩̥ ·͙*̩̩͙˚̩̥̩̥*̩̩̥͙·̩̩̥͙*̩̩̥͙˚̩̥̩̥*̩̩͙‧͙ °̩̥˚̩̩̥͙°̩̥ ♡ ‧̍̊·̊‧̥°̩̥˚̩̩̥͙°̩̥‧̥·̊‧̍̊</p></div>  <span class="height-toggle pointer"  data-popup="join-community" data-popup-icons="//pm1.aminoapps.com/7791/b2d936d73728a3604a7cb8c4f00218c41f4d8a54r1-390-390v2_128.jpg" data-popup-deeplink="narviiapp://x58/comment/37383ac8-0a45-467f-b688-7bdbae97b961?parent-type=0&amp;parent-id=2b08d87f-bf32-40b1-a013-0ac69e6c45ee" data-popup-motivation="reply" data-popup-close-by-overlay="1" data-popup-success-redirect="https://aminoapps.com/c/cartoon/page/user/toby/Z6BH_nfBklXm0kprn7l5DwJwamWdvJ#comment-37383ac8-0a45-467f-b688-7bdbae97b961" data-popup-source="Expand Comment"  data-tea-event="expand_collapsed_comment" > Read more <i class="fa fa-caret-down"></i> </span> </div>  <div class="bottom-info">  <span class="vote pointer" data-vce="btn-like-comment" data-vote-value="0" data-login-motivation="Sign in to like this comment." data-join-icons="//pm1.aminoapps.com/7791/b2d936d73728a3604a7cb8c4f00218c41f4d8a54r1-390-390v2_128.jpg" data-join-deeplink="narviiapp://x58/comment/37383ac8-0a45-467f-b688-7bdbae97b961?parent-type=0&amp;parent-id=2b08d87f-bf32-40b1-a013-0ac69e6c45ee" data-join-motivation="like" data-join-motivation-like="comment" data-event-label="like_comment" data-source="Like Comment" > <i class="amino-icon amino-icon-heart-o"></i> <i class="amino-icon amino-icon-heart"></i> <span class="num">0</span> </span>   <span class="reply pointer" data-join-icons="//pm1.aminoapps.com/7791/b2d936d73728a3604a7cb8c4f00218c41f4d8a54r1-390-390v2_128.jpg" data-join-deeplink="narviiapp://x58/comment/37383ac8-0a45-467f-b688-7bdbae97b961?parent-type=0&amp;parent-id=2b08d87f-bf32-40b1-a013-0ac69e6c45ee" data-join-motivation="reply" > <i class="amino-icon amino-icon-comment-splat-o"></i> <span class="label">Reply</span> </span>  <span class="pretty-date">07/10/20</span> </div> </div> </div> </article>   </div> <section class="live-comment"> <div class="content"> <div class="upper"> <ul class="comments unstyled"></ul> </div> <div class="pointer state-switch"> <span class="switch-on"> <i class="amino-icon amino-icon-show-comment"></i> </span> <span class="switch-off"> <i class="amino-icon amino-icon-hide-comment"></i> </span> </div>  <div class="comment-input-bar placeholder pointer"> <textarea name="content" readonly placeholder="Say something…"></textarea> </div>  </div> </section> </section>  </div> </section> <section class="blocked-indicator" data-author-uid="2b08d87f-bf32-40b1-a013-0ac69e6c45ee"> <div class="blocked-container"> <i class="fa fa-ban"></i> You are blocked from following this user and viewing this user's posts. </div> </section> </article> </section>  <div class="live-member-list" data-vce="member-list" data-event-category="Popup Join" data-event-action="online_members" data-tea-event="download_popup" data-tea-source="Online Members" > <div class="content" data-vce="btn-popup" data-popup="join-community"  data-popup-motivation="online_members" data-popup-tea-source="Online Members Popup" data-popup-close-by-overlay="1" > <span class="avatars"></span> <span class="member-counter" data-vce="overflow-aware"></span> </div> </div> </section> <div class="community-livelayer-padding cloak"></div>  <aside class="community-sidebar" data-vce="sidebar-community" data-close-by-overlay="1"> <div class="content community-sidebar-container overflow-scroll-sidebar">  <section class="sidebar-card community-info sidebar-section user-canopy " data-vce="join-community"> <div class="sidebar-community-bg community-bg">  <img class="img-cover" src="//cm1.aminoapps.com/8827/ac847e0e644a5eb27e52f7212c10a5b3471202be_375.jpg" alt="community background">  </div>  <div class="sidebar-profile-container"> <a class="block sidebar-community-info" href="https://aminoapps.com/c/cartoon/info/" data-refer-type="community_card" >  <div class="community-icon"> <img class="logo" src="//static.aminoapps.com/default-assets/x58_icon_120.png"> </div> <div class="basic-info"> <h1 class="title font-montserrat-black" data-vce="rich-content">Cartoon</h1> <div class="heat-gauge"> <div class="heat heat-6"></div> <div class="gauge"></div> <div class="gauge"></div> <div class="gauge"></div> <div class="gauge"></div> <div class="gauge"></div> <div class="gauge"></div> <div class="gauge"></div> <div class="gauge"></div> </div> <div class="member-count">  118,811 Members  </div> </div> </a> <p class="tagline">The dream land of the committed cartoon lovers</p> <button class="btn full-width pointer community-bg" data-vce="btn-join-community" data-vce-name="direct_join" data-event-label="community_card" data-source="Card Join Now" data-event-category="Join" data-ndc-id="58" > Join Now </button> <button class="btn button full-width pointer community-color pre-login-compose" data-vce="pre-login-btn" data-event-label="create_post" data-source="Card Create Post" data-true-form="user/compose-entry" data-success-redirect="" data-join-icons="//static.aminoapps.com/default-assets/x58_icon_120.png" data-join-motivation="create-post" data-login-motivation="Sign in to create a post." data-event-category="Join" data-ndc-id="58" > Create Post </button> </div>  </section> <!-- Implement desktop_wana_left --> <div style= "display:flex; justify-content:center; align-items: center; width:300px; min-height:250px"> <section id="slot-left-aside" class="ad-block left" style="width:300px; min-height:250px;"></section> </div> <script type='text/javascript'>
+    document.addEventListener('ANAReady', () => {
+        if (window.slotLeftAside) {
+            return;
+        }
+
+        window.createSlot('slotLeftAside', 'slot-left-aside', '/114106652/amino_300x250_atf_desktop_2', [[300, 250]])
+            .then(() => {
+                window.ANAWeb.autoRefreshSlots([slotLeftAside], 15000, false)
+            })
+
+    });
+</script> </div>  <div class="content" data-vce-name="sidebar_content" data-vce="sticky"></div>  </aside> <aside class="community-aside recommendation-sidebar"> <div class="content overflow-scroll-sidebar" data-vce="sticky" data-stick-bottom="1" data-top="67"> <div class="ad-block-container" style="display:flex; justify-content: center; align-items: center; width:300px; min-height:600px;"> <section class="ad-block" style="width:300px; min-height:250px;"> </section> </div> <script type='text/javascript'>
+    document.getElementsByClassName("ad-block-container")[0].children[0].id = 'slot-right-aside';
+
+    document.addEventListener('ANAReady', () => startWanaRight());
+
+    window.addEventListener("resize", () => startWanaRight());
+
+    const startWanaRight = () => {
+        if (window.innerWidth > 1206) {
+
+            if (window.slotRightAside) {
+                return;
+            }
+
+            window.createSlot('slotRightAside', 'slot-right-aside', '/114106652/amino_300x250_atf_desktop', [[300, 250], [300, 600]], true, 1207)
+                .then(() => {
+                    if (false) {
+                        window.scrollListener('ad-block-container', "slot-right-aside");
+                    }
+                });
+            
+        }
+    }
+
+
+</script>  <section class="sidebar-card chatroom-sidebar" data-vce="sidebar-chat-list"> <h3 class="label community-color"> <i class="amino-icon amino-icon-reload j-reload"></i> Public Chatrooms </h3> <div class="chatroom-list-container simple-list"> </div> <div class="loading-overlay"> <i class="fa fa-spin fa-circle-o-notch community-color"></i> </div> </section>   <section class="popular"> <h3 class="label community-color with-margin">Featured Posts</h3> <section class="simple-list">   <article class="post mutual-block " >  <div class="cover">  <div class="full-wh loading" data-vce="fading-media">  <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-Ᏸυввleѕ-8a917cd3" data-vce="image" decoding="async" id="media-8a917cd3"  src="//pm1.aminoapps.com/6648/bee21faaff8860304ad8956918d010788b7cd9fd_00.jpg"  >  </div>  </div> <a class="block content" href="https://aminoapps.com/c/cartoon/page/blog/spoiler-alert-tpl-psa/BQ4I_wukZmlx7Pe7EP4MoEjxXDPzz6"  data-vce="rich-content" data-refer-type="sidebar_post_popular" > <section class="desc"> <h3 class="title"> Spoiler Alert TPL PSA </h3>  </section> <footer class="actions"> <div class="action"> <i class="fa fa-heart"></i> <span class="num">887</span> </div> <div class="action"> <i class="amino-icon amino-icon-comment-splat"></i> <span class="num">98</span> </div> </footer> </a> </article>   <article class="post mutual-block " >  <div class="cover">  <div class="full-wh loading" data-vce="fading-media">  <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-Cartoon Dad-ec4afd36" data-vce="image" decoding="async" id="media-ec4afd36" src="//wa1.aminoapps.com/static/img/lazy.png" data-src="//pa1.aminoapps.com/7006/2bfc99a85dcf9eb4034fbbf276522fdf9a33ee6br1-500-284_00.gif"  >  </div>  </div> <a class="block content" href="https://aminoapps.com/c/cartoon/page/blog/top-ten-dbz-movies/PJBI_mudMW7ElDp7erW71wJqrNP7ZQN"  data-vce="rich-content" data-refer-type="sidebar_post_popular" > <section class="desc"> <h3 class="title"> Top Ten DBZ Movies </h3>  </section> <footer class="actions"> <div class="action"> <i class="fa fa-heart"></i> <span class="num">7</span> </div> <div class="action"> <i class="amino-icon amino-icon-comment-splat"></i> <span class="num">1</span> </div> </footer> </a> </article>   <article class="post mutual-block " >  <div class="cover">  <div class="full-wh loading" data-vce="fading-media">  <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-💖 Milli 💖-246c76d9" data-vce="image" decoding="async" id="media-246c76d9"  src="//pm1.aminoapps.com/7174/058cb9a2faf9f20158a0ca5049ca40379108d3ebr1-933-1024v2_00.jpg"  >  </div>  </div> <a class="block content" href="https://aminoapps.com/c/cartoon/page/blog/millis-top-ten-worst-nick-jr-cartoons/lX7I_QuXGm707l5LNPN5Na2lpEYKPn6"  data-vce="rich-content" data-refer-type="sidebar_post_popular" > <section class="desc"> <h3 class="title"> 🥀Milli's Top Ten WORST Nick Jr. Cartoons🥀 </h3>  </section> <footer class="actions"> <div class="action"> <i class="fa fa-heart"></i> <span class="num">59</span> </div> <div class="action"> <i class="amino-icon amino-icon-comment-splat"></i> <span class="num">33</span> </div> </footer> </a> </article>  </section> <a href="/c/cartoon/" class="more linkblue block" data-refer-type="sidebar_post_more"> See more </a> </section>  <section class="leader-pick"> <h3 class="label community-color with-margin">More Communities</h3> <div data-vce="carousel" data-height="176" data-arrow-offset="-26"> <div class="community-bg arrow arrow-left"> <i class="fa fa-chevron-left"></i> </div> <div class="community-bg arrow arrow-right"> <i class="fa fa-chevron-right"></i> </div> <div class="scroll-container" data-vce="rich-content">  <a href="https://aminoapps.com/c/anime-art/" class="block carousel-item" data-refer-type="sidebar_community"> <div class="community-card"> <img class="community-icon" data-vce="image" data-src="//cm1.aminoapps.com/8683/747f041615ceafdc7da421fdfdaed21064469039_120.jpg">  <img class="background" data-vce="image" data-src="//cm1.aminoapps.com/8683/e316c184d92c531c8084e4cc984432973dee8892_375.jpg">  </div> <div class="name">Anime Art</div> </a>  <a href="https://aminoapps.com/c/anime/" class="block carousel-item" data-refer-type="sidebar_community"> <div class="community-card"> <img class="community-icon" data-vce="image" data-src="//static.aminoapps.com/default-assets/x3_icon_120.png">  <img class="background" data-vce="image" data-src="//cm1.aminoapps.com/8946/c693d7b5fbe6df56e9806fa0ef32aedce445f133_375.jpg">  </div> <div class="name">Anime</div> </a>  <a href="https://aminoapps.com/c/miraculous/" class="block carousel-item" data-refer-type="sidebar_community"> <div class="community-card"> <img class="community-icon" data-vce="image" data-src="//cm1.aminoapps.com/7982/24c0cd89d8e6c26f617217d3a7581ada2ecc74b4_120.jpg">  <img class="background" data-vce="image" data-src="//cm1.aminoapps.com/8703/51bd721fb8d44d5da8d73a7f2f329372a9e3ccb0_375.jpg">  </div> <div class="name">Miraculous</div> </a>  <a href="https://aminoapps.com/c/equestria/" class="block carousel-item" data-refer-type="sidebar_community"> <div class="community-card"> <img class="community-icon" data-vce="image" data-src="//cm1.aminoapps.com/8354/77d042d3ab972b821d47c3beae7d3f2fb35b4d46_120.jpg">  <img class="background" data-vce="image" data-src="//cm1.aminoapps.com/7369/ff05d793101cabde940bb6bede3add173176433b_375.jpg">  </div> <div class="name">Equestria Unofficial Fan Club</div> </a>  <a href="https://aminoapps.com/c/adventure-time-amino/" class="block carousel-item" data-refer-type="sidebar_community"> <div class="community-card"> <img class="community-icon" data-vce="image" data-src="//cm1.aminoapps.com/8655/3f5c677a3c7a33f2b85423206d76194159951798_120.jpg">  <img class="background" data-vce="image" data-src="//cm1.aminoapps.com/8655/d1bac580b1fe79ab9470d7fe6ebb1ba47662bf35_375.jpg">  </div> <div class="name">Adventure Time Amino</div> </a>  <a href="https://aminoapps.com/c/disney/" class="block carousel-item" data-refer-type="sidebar_community"> <div class="community-card"> <img class="community-icon" data-vce="image" data-src="//cm1.aminoapps.com/8947/7ff6144746ac37db1f92cdf1ce8c88d4b0b18770_120.jpg">  <img class="background" data-vce="image" data-src="//cm1.aminoapps.com/8947/c19591ba54a352fd5d4e1190bd8766a67cb4af6d_375.jpg">  </div> <div class="name">Disney</div> </a>  <a href="https://aminoapps.com/c/comics/" class="block carousel-item" data-refer-type="sidebar_community"> <div class="community-card"> <img class="community-icon" data-vce="image" data-src="//cm1.aminoapps.com/7685/b440a86930b3a9f248595889d677d4bc6a2d5eb7_120.jpg">  <img class="background" data-vce="image" data-src="//cm1.aminoapps.com/8113/9674005415313b3029bf07928668a6d0e71b1848_375.jpg">  </div> <div class="name">Comics</div> </a>  <a href="https://aminoapps.com/c/art/" class="block carousel-item" data-refer-type="sidebar_community"> <div class="community-card"> <img class="community-icon" data-vce="image" data-src="//static.aminoapps.com/default-assets/x6_icon_120.png">  <img class="background" data-vce="image" data-src="//cm1.aminoapps.com/7882/b027755440fc39d03b452a14904e31ac08c1e23a_375.jpg">  </div> <div class="name">Art</div> </a>  <a href="https://aminoapps.com/c/movies-tv/" class="block carousel-item" data-refer-type="sidebar_community"> <div class="community-card"> <img class="community-icon" data-vce="image" data-src="//cm1.aminoapps.com/8593/50dc0738238b7067bbddbafa948211df4c939067_120.jpg">  <img class="background" data-vce="image" data-src="//cm1.aminoapps.com/8593/782874d8e1df9ba182c517d025ea1162b8f1a308_375.jpg">  </div> <div class="name">Movies &amp; TV</div> </a>  </div> </div> </section>  <section class="popular"> <h3 class="label community-color with-margin">Popular Wiki Entries</h3> <section class="simple-list">   <article class="post mutual-block " >  <a class="block cover item" href="https://aminoapps.com/c/cartoon/page/item/invader-zim/wKjI_pIlDKlV5qzodMr564owKrBK8B"  data-vce="rich-content" data-refer-type="sidebar_wiki_related" > <div class="cover-img loading" data-vce="fading-media">  <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-System-f4e1784d" data-vce="image" decoding="async" id="media-f4e1784d"  src="//pm1.aminoapps.com/6591/3aaf207f70d38142e6e2cfb2a723327b7fd373f8_00.jpg"  >  </div> <div class="overlay">  <img class="img-cover item-curated item-icon" alt="amino-System-6a8b4864" data-vce="image" decoding="async" id="media-6a8b4864" src="//wa1.aminoapps.com/static/img/lazy.png" data-src="//pa1.aminoapps.com/6591/0059097a2e040ceb3202de89f6350eb8c4e9196f_00.gif"  >  <div class="remain overflow-hidden"> <h3 class="title">invader zim</h3> <div class="counters"> <span class="counter"> <i class="fa fa-heart"></i> <span class="num">70</span> </span> <span class="counter"> <i class="amino-icon amino-icon-comment-splat"></i> <span class="num">4</span> </span> </div> </div> </div> </a> </article>   <article class="post mutual-block " >  <a class="block cover item" href="https://aminoapps.com/c/cartoon/page/item/chowder/wKjI_pIrV3Ejl7MQWkdkkepo8ZjBdKn"  data-vce="rich-content" data-refer-type="sidebar_wiki_related" > <div class="cover-img loading" data-vce="fading-media">  <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-System-f0fef567" data-vce="image" decoding="async" id="media-f0fef567" src="//wa1.aminoapps.com/static/img/lazy.png" data-src="//pa1.aminoapps.com/7229/25763cbba220b4af8fc4cd6e0a3556e6d3214f72r5-500-375_00.gif"  >  </div> <div class="overlay">  <img class="img-cover item-curated item-icon" alt="amino-System-8dd21591" data-vce="image" decoding="async" id="media-8dd21591"  src="//pm1.aminoapps.com/7229/202d2f8eae535b42f3ae1cce0ffd987ffa9cc9a0r1-960-1440v2_00.jpg"  >  <div class="remain overflow-hidden"> <h3 class="title">Chowder</h3> <div class="counters"> <span class="counter"> <i class="fa fa-heart"></i> <span class="num">29</span> </span> <span class="counter"> <i class="amino-icon amino-icon-comment-splat"></i> <span class="num">6</span> </span> </div> </div> </div> </a> </article>   <article class="post mutual-block " >  <a class="block cover item" href="https://aminoapps.com/c/cartoon/page/item/varian/g0JU_KIq5awEJr2mvdNm7LPkmlm866r"  data-vce="rich-content" data-refer-type="sidebar_wiki_related" > <div class="cover-img loading" data-vce="fading-media">  <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-System-4ba4cac2" data-vce="image" decoding="async" id="media-4ba4cac2" src="//wa1.aminoapps.com/static/img/lazy.png" data-src="//pa1.aminoapps.com/6849/4eeec1ab6d82f35834492eb350c723255c949d13_00.gif"  >  </div> <div class="overlay">  <img class="img-cover item-curated item-icon" alt="amino-System-999e4b64" data-vce="image" decoding="async" id="media-999e4b64" src="//wa1.aminoapps.com/static/img/lazy.png" data-src="//pa1.aminoapps.com/6849/204766195f416348837e5256334a264879cf799a_00.gif"  >  <div class="remain overflow-hidden"> <h3 class="title">Varian</h3> <div class="counters"> <span class="counter"> <i class="fa fa-heart"></i> <span class="num">45</span> </span> <span class="counter"> <i class="amino-icon amino-icon-comment-splat"></i> <span class="num">18</span> </span> </div> </div> </div> </a> </article>  </section> <a href="/c/cartoon/wiki/" data-refer-type="sidebar_wiki_more" class="more linkblue block"> See more </a> </section>  <section class="gallery"> <h3 class="label community-color with-margin">Shared Folder</h3> <div data-vce="carousel" data-height="140" data-arrow-offset="-5"> <div class="community-bg arrow arrow-left"> <i class="fa fa-chevron-left"></i> </div> <div class="community-bg arrow arrow-right"> <i class="fa fa-chevron-right"></i> </div> <div class="scroll-container">  <article class="album carousel-item">  <div class="album-cover loading" data-vce="fading-media"> <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-🎃Ⓒⓗⓔⓒⓚⓔⓡⓔⓓ🕸Ⓕⓐⓝⓒⓨ🎃-67226a12" data-vce="image" decoding="async" id="media-67226a12"  src="//sa1.narvii.com/6566/9d1b00e5c40acde3b025c69e9104fadeb027c0ca_00.gif?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL3NhMS5uYXJ2aWkuY29tLzY1NjYvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMDI0MzAwN319fV19&Signature=ntnf-CMABzbf7fPKJ4zaZiJPgieuXzSKyG6aQv4DLb95UCkclwaN1dRBgd4DIf8dW4a0cEz2tNAdxQdTcyes8BgwnLdlP83k7~heVujMkthRlvKy~Xr9v3wu0nyU0qR4hSc-jhnQCyvaXLZUttXJ8s3TngYDxOdONlnT392CXes_&Key-Pair-Id=APKAICUDKLX2XOCDJKNA"  >  </div>  <a class="block content" data-refer-type="sidebar_gallery_content" href="https://aminoapps.com/c/cartoon/page/shared-folder/perfect-looping-animated-gifs/aV1I_8JiaDoQLM5QaXg5Jm2ZXNYlMPjP"> <div class="like"> <i class="amino-icon amino-icon-heart"></i> 906 </div> <div class="title" data-vce="rich-content"> Perfect Looping Animated GIFs </div> <div class="count"> 354 Photos </div> </a> </article>  <article class="album carousel-item">  <div class="album-cover loading" data-vce="fading-media"> <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-GummyGalra {BIO}-1bf5a662" data-vce="image" decoding="async" id="media-1bf5a662"  src="//sm1.aminoapps.com/6658/511c3db367f6587990b2fb9400bf449c5e06f706_00.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL3NtMS5uYXJ2aWkuY29tLzY2NTgvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMDI1MDc4OX19fV19&Signature=kPEzojrh0Hfoc3kEcTeIcpLXzCMupHyDRynJJEs2WOlNa2k0dAUrV8oOwS1faZtuOYp1GmC2BlmLH0FdAQ5yWkMWIsAtH24C04i3tFqEfa44ytZi5K-c0Y5wCXeuXnbf1WaLu~zUU5ppBJXZgippOG~YFUXDAPeL50xOf6eXXNg_&Key-Pair-Id=APKAICUDKLX2XOCDJKNA"  >  </div>  <a class="block content" data-refer-type="sidebar_gallery_content" href="https://aminoapps.com/c/cartoon/page/shared-folder/voltron/MQ3I_0dCdj1mLXx6YNVYNand5JGJ74r"> <div class="like"> <i class="amino-icon amino-icon-heart"></i> 794 </div> <div class="title" data-vce="rich-content"> Voltron </div> <div class="count"> 395 Photos </div> </a> </article>  <article class="album carousel-item">  <div class="album-cover loading" data-vce="fading-media"> <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-Ᏸυввleѕ-83b31d77" data-vce="image" decoding="async" id="media-83b31d77"  src="//sm1.aminoapps.com/7934/c948608ae0418c8a7a239bbb367d91a73be376adr2-1660-2048v2_00.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL3NtMS5uYXJ2aWkuY29tLzc5MzQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMDIzMzkwMX19fV19&Signature=aZHoypynQi3riJ7mOBBzoA0siuSlDeFc2QVNRUuV1eltr-DqpGq822z~n4CgoZ5WpZTOtNWZTFJ2bXD9TngVWiRvD58cEKl6Mnvg04~0ZDP9txUj85RCwbjw~J01KPCzYSOnPzuu~lJ4zZ-JOkaMfCcLbs6xexomtIE8Ob9UHbQ_&Key-Pair-Id=APKAICUDKLX2XOCDJKNA"  >  </div>  <a class="block content" data-refer-type="sidebar_gallery_content" href="https://aminoapps.com/c/cartoon/page/shared-folder/memes/PJBI_3zIDKXVmn7ZXRKzl5qk36Y5QPmo"> <div class="like"> <i class="amino-icon amino-icon-heart"></i> 578 </div> <div class="title" data-vce="rich-content"> MEMES </div> <div class="count"> 655 Photos </div> </a> </article>  <article class="album carousel-item">  <div class="album-cover loading" data-vce="fading-media"> <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-Phillip-718ed174" data-vce="image" decoding="async" id="media-718ed174"  src="//sm1.aminoapps.com/6556/8a0a265706d87e9501b533d6babfd734f8b50852_00.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL3NtMS5uYXJ2aWkuY29tLzY1NTYvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMDI0OTg2OH19fV19&Signature=klVYL-jn225Hml-~JKhLO8GbybA1d9JtlA-QyyU~kOe5fUF~XhKecdpUcs1MXEYKnnHBRMs27ufxtE88q4v9f3skVpCMWOUvOAgfQTNOOi~NbOb9GI2s2Z4UFlUACHCciZUOux~cH2lFAHszEGdpQqwO458sEnC7wI9ovjtuUf0_&Key-Pair-Id=APKAICUDKLX2XOCDJKNA"  >  </div>  <a class="block content" data-refer-type="sidebar_gallery_content" href="https://aminoapps.com/c/cartoon/page/shared-folder/gravity-falls/n5YS_K3Ib253163oW66wRxWJavB1e0r"> <div class="like"> <i class="amino-icon amino-icon-heart"></i> 513 </div> <div class="title" data-vce="rich-content"> Gravity Falls </div> <div class="count"> 182 Photos </div> </a> </article>  <article class="album carousel-item">  <div class="album-cover loading" data-vce="fading-media"> <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-Phillip-6ced456c" data-vce="image" decoding="async" id="media-6ced456c"  src="//sm1.aminoapps.com/6612/dd95e9873142b4e1214fbd8617f5ce501cc0272f_00.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL3NtMS5uYXJ2aWkuY29tLzY2MTIvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMDIzNTQ3Mn19fV19&Signature=e9VLKFARdVEKeFhUJE3cdbA~gyYzmni-aCAsSNQ5AI3Ns6cp1zQQDLdO3I0gM~XLiKG2i0eRDgl~P0IqcpuhszITZxue8HYHjHnqRLX54HvbOAchwDmxQ3hnp~S-kLE3XY9j6wFGLb7ytSbjGTsFlgR2u9Jz8G7YFLH8xmbHEsY_&Key-Pair-Id=APKAICUDKLX2XOCDJKNA"  >  </div>  <a class="block content" data-refer-type="sidebar_gallery_content" href="https://aminoapps.com/c/cartoon/page/shared-folder/atla-tlok/j05U_oXCj8mnBxGlk43ww6wPVgWnxl2"> <div class="like"> <i class="amino-icon amino-icon-heart"></i> 404 </div> <div class="title" data-vce="rich-content"> ATLA/TLOK </div> <div class="count"> 165 Photos </div> </a> </article>  <article class="album carousel-item">  <div class="album-cover loading" data-vce="fading-media"> <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-🌺VereHB-1d8a3938" data-vce="image" decoding="async" id="media-1d8a3938" src="//wa1.aminoapps.com/static/img/lazy.png" data-src="//sm1.aminoapps.com/7479/45bf45cfde83e0584323f6cf5cec54f713023ad6r2-1024-1020v2_00.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL3NtMS5uYXJ2aWkuY29tLzc0NzkvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMDIzMTAzMX19fV19&Signature=ocC0HyDWj-PsIAIsDNREQr8z42ZvZrBWzq~csCkIzEvqcTSouZUhL1Ut2~H465~DjJX-4LOI8pFDV4O02AQhT1m0imFrX0ITPWiLDe26kBMMbN885BKIUW5wIckGJDudGUhc6LcO~HjDH6VJVcFKn-px3kpokcE2ugqQ25OzLiM_&Key-Pair-Id=APKAICUDKLX2XOCDJKNA"  >  </div>  <a class="block content" data-refer-type="sidebar_gallery_content" href="https://aminoapps.com/c/cartoon/page/shared-folder/crystal-gems/g0JU_KnIGj2Nd28Z3PjYwJPowWBYbPMR"> <div class="like"> <i class="amino-icon amino-icon-heart"></i> 391 </div> <div class="title" data-vce="rich-content"> Crystal Gems </div> <div class="count"> 138 Photos </div> </a> </article>  <article class="album carousel-item">  <div class="album-cover loading" data-vce="fading-media"> <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-GummyGalra {BIO}-2cdf1ea4" data-vce="image" decoding="async" id="media-2cdf1ea4" src="//wa1.aminoapps.com/static/img/lazy.png" data-src="//sm1.aminoapps.com/6760/13a5b3fff907ae5611b490bf5b0c7af1176a7888v2_00.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL3NtMS5uYXJ2aWkuY29tLzY3NjAvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMDIzNzY0MH19fV19&Signature=jNPuGoBzK-K1FXzrJ9q2nnUgGOuhtQ7W-bJ8XsVspV9SGYG1HjuPbHT6odrqWftazLMDKEjblVAkU-OoV5fmYY9MFHVgqD~Lp4mTYLhOjQm2uG5lzkMFRhd4mpJQVZNCywQZsG0~keQwdXan78gPW7dlojiuj6xie-AJo53gp2U_&Key-Pair-Id=APKAICUDKLX2XOCDJKNA"  >  </div>  <a class="block content" data-refer-type="sidebar_gallery_content" href="https://aminoapps.com/c/cartoon/page/shared-folder/the-keef-album/o3ki_o2CBKGK83Mpn5gwYEomWnD56Dbj"> <div class="like"> <i class="amino-icon amino-icon-heart"></i> 329 </div> <div class="title" data-vce="rich-content"> The Keef Album </div> <div class="count"> 104 Photos </div> </a> </article>  <article class="album carousel-item">  <div class="album-cover loading" data-vce="fading-media"> <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-༄✧ ͙༣ ⋆𝙱𝚞𝚏𝚏𝙱𝚒𝚜𝚌𝚞𝚒𝚝༄✧ ͙༣ ⋆-1fcd79d3" data-vce="image" decoding="async" id="media-1fcd79d3" src="//wa1.aminoapps.com/static/img/lazy.png" data-src="//sm1.aminoapps.com/8914/515c3e81b9f95f580369ddfd502122745cdd4a83r2-1500-1500v2_00.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL3NtMS5hbWlub2FwcHMuY29tLzg5MTQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMDI0Mjk4Nn19fV19&Signature=A82TBqvCP6bqnyNts0Iij6N7HZAEieKiCoB6W8-Og3BdvBCsUXYUN8XXMIfCsP8K-ibW9byePt3pqZPNcUYTL5uPyt3MdRjo9TeeJ~chLNbaPz1gG4~Ii1fIxXKYKbtHhWYYwiuo7KW1TJ1dsRYXlrQ3TaWF6FFpl8q1a1kawDI_&Key-Pair-Id=APKAICUDKLX2XOCDJKNA"  >  </div>  <a class="block content" data-refer-type="sidebar_gallery_content" href="https://aminoapps.com/c/cartoon/page/shared-folder/ca-editing-club-proofshots/N4Bh_W7H3WgLmbJZdqMmPkqwdd4Pg537"> <div class="like"> <i class="amino-icon amino-icon-heart"></i> 315 </div> <div class="title" data-vce="rich-content"> CA Editing Club Proofshots </div> <div class="count"> 662 Photos </div> </a> </article>  <article class="album carousel-item">  <div class="album-cover loading" data-vce="fading-media"> <div class="cover community-bg"></div>  <img class="img-cover " alt="amino-Phillip-c7445db4" data-vce="image" decoding="async" id="media-c7445db4" src="//wa1.aminoapps.com/static/img/lazy.png" data-src="//sm1.aminoapps.com/6578/ef4fc8d6342388597304261b3b649cae0fba28ac_00.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL3NtMS5uYXJ2aWkuY29tLzY1NzgvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMDIyNjk4M319fV19&Signature=b9GVH6Su3~BtFdQIbPmWHd3gx0MdhxMx56XRl-oAxQMKCA-If6~wCSBeVCP-bsHDD4i5FxtHYiE2D05xEnZFJP2z3I11Ghn7m0cczrgkie~~DsXbUGbKo1XYGOQ8vI54AxBGXXMTZPjBfm6U8NbMP~xrNe~VAT3zGdIFs5AqOXo_&Key-Pair-Id=APKAICUDKLX2XOCDJKNA"  >  </div>  <a class="block content" data-refer-type="sidebar_gallery_content" href="https://aminoapps.com/c/cartoon/page/shared-folder/ships/G52S_VwS1bJYPR187qQkawln5omgZ7M"> <div class="like"> <i class="amino-icon amino-icon-heart"></i> 264 </div> <div class="title" data-vce="rich-content">  :blush: Ships :sparkling_heart:  </div> <div class="count"> 125 Photos </div> </a> </article>  <a class="carousel-item more-icon community-bg block" href="/c/cartoon/shared-folder/" data-refer-type="sidebar_gallery_more_icon"> <i class="amino-icon amino-icon-folder "></i> <div class="label">See more</div> </a> </div> </div> <a href="/c/cartoon/shared-folder/" data-refer-type="sidebar_gallery_more" class="more linkblue block"> See more </a> </section>  </div> </aside> <a id="call2action-interested" class="disp_none" data-vce="btn-popup" data-popup="join-community" data-popup-icons="//pm1.aminoapps.com/8927/387ffefd7267f743e41bfe4a191eea070bd8be74r1-530-530v2_128.jpg" data-popup-motivation="proactive" data-popup-tea-source="Proactive Popup"  data-popup-close-by-overlay="1"  ></a> </section>
+
+
+
+<div class="modal" data-true-form="modal">
+    <div class="overlay"></div>
+    <div class="content"></div>
+    <div class="swipe-indicator swipe-indicator-left">
+        <i class="fa fa-arrow-circle-left fa-3x"></i>
+    </div>
+    <div class="swipe-indicator swipe-indicator-right">
+        <i class="fa fa-arrow-circle-right fa-3x"></i>
+    </div>
+</div>
+
+<div class="back-top">
+    <a class="content block pointer">
+        <i class="fa fa-arrow-up fa-2x"></i>
+    </a>
+</div>
+
+<div data-vce="toast">
+    <div class="content">
+    </div>
+</div>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap">
+<link rel="stylesheet" href="//wa1.aminoapps.com/static/dist/css/font-awesome.edabab9db.css">
+<script>
+var s = window.ServerData;
+s.eventLabel = 'page_v2.user-profile.index';
+s.hostUrl = "https://aminoapps.com";
+s.serverName = "aminoapps.com";
+s.referType = "";
+s.facebookClientId = "255884441431980";
+s.googleClientId = "965888619343-p4j7tjogbsffi3u5l1tidk8jlb3s8idb.apps.googleusercontent.com";
+s.recaptchaV3Key = "6LegkZQpAAAAAN1F4YST-0GKQBdkkoZr_xEMC-Mc";
+s.language = "en"
+s.assetURLPrefix = "//wa1.aminoapps.com/static"
+window._ = function (text) { return window._.dict[text] || text; };
+window._.dict = {"Are you sure you want to leave this Community?": "Are you sure you want to leave this Community?", "Copied": "Copied", "Enjoy your experience in Amino Community? Get the app and join us!": "Enjoy your experience in Amino Community? Get the app and join us!", "Exclusive Posts": "Exclusive Posts", "Fan Status": "Fan Status", "Flag for Review": "Flag for Review", "Get App": "Get App", "Got any thoughts on my post?": "Got any thoughts on my post?", "Got it": "Got it", "I\u0027d love to hear your voice! Get the Amino app!": "I\u0027d love to hear your voice! Get the Amino app!", "Interested in my post? Join this Community and let\u0027s talk!": "Interested in my post? Join this Community and let\u0027s talk!", "Join": "Join", "Join Now": "Join Now", "Join this Community and leave a comment!": "Join this Community and leave a comment!", "Join this Community and let\u0027s talk!": "Join this Community and let\u0027s talk!", "Join this Community to hang out with all of us [community_name] members": "Join this Community to hang out with all of us [community_name] members", "Join this Community to read my full comment!": "Join this Community to read my full comment!", "Join this Community to see all our comments!": "Join this Community to see all our comments!", "Keep up with members you follow in this Community": "Keep up with members you follow in this Community", "Let\u0027s talk about it on Amino.": "Let\u0027s talk about it on Amino.", "Loading": "Loading", "Member Chats": "Member Chats", "Oh, you like my comment?": "Oh, you like my comment?", "Oh, you like my post?": "Oh, you like my post?", "Oh, you like my wiki?": "Oh, you like my wiki?", "Only members of this Community have the right to vote.": "Only members of this Community have the right to vote.", "Open in App": "Open in App", "Put it somewhere people will see it.": "Put it somewhere people will see it.", "Reply to:": "Reply to:", "Share this post": "Share this post", "Sign in to join this Community.": "Sign in to join this Community.", "Sign in to leave a comment.": "Sign in to leave a comment.", "Sign in to read more replies.": "Sign in to read more replies.", "Sign in to read the whole comment.": "Sign in to read the whole comment.", "Sign in to see all comments.": "Sign in to see all comments.", "Something to say?": "Something to say?", "Something to share? Join this Community to create a post.": "Something to share? Join this Community to create a post.", "There\u0027s all sorts of good stuff happening in this fan club.": "There\u0027s all sorts of good stuff happening in this fan club.", "This Community is full of great stuff. Get the app to see it all.": "This Community is full of great stuff. Get the app to see it all.", "This Fan Club is closed.": "This Fan Club is closed.", "This chat is for Community members only.": "This chat is for Community members only.", "Yes": "Yes", "You can only comment if you join this Community.": "You can only comment if you join this Community.", "You can only follow me if you get the Amino app. Do it do it do it.": "You can only follow me if you get the Amino app. Do it do it do it.", "You can only follow me if you join this Community.": "You can only follow me if you join this Community.", "You can only join my fan club on the Amino app. Do it do it.": "You can only join my fan club on the Amino app. Do it do it.", "You can renew your subscription on the Amino app.": "You can renew your subscription on the Amino app.", "You need to get the Amino app to join my Community. See you there!": "You need to get the Amino app to join my Community. See you there!", "You need to get the Amino app to start chating with us.": "You need to get the Amino app to start chating with us.", "You need to join this Community first!": "You need to join this Community first!", "You need to join this Community to start chatting with us.": "You need to join this Community to start chatting with us.", "[member_count] member online": "[member_count] member online", "[member_count] members online": "[member_count] members online", "[nickname] is now online": "[nickname] is now online", "[nickname] just joined": "[nickname] just joined"};
+s.isLogin = false;
+s.isMember = false;
+</script>
+
+<script>
+    ServerData.deeplink = "narviiapp://x58/description";
+    ServerData.community = {"Android": "https://aminoapps.com/jump/store?id=com.narvii.amino.master", "color": [88, 157, 255, 1.0], "deeplink": "narviiapp://x58/description", "endpoint": "cartoon", "iOS": "/jump/store?target=ios", "isPrivate": false, "linkDownload": "/c/cartoon/download/", "logo": "//static.aminoapps.com/default-assets/x58_icon_120.png", "membersCount": 118811, "name": "Cartoon", "ndcId": "x58", "tagline": "The dream land of the committed cartoon lovers"};
+    ServerData.experiments = {"ab_proactive_download_popup_ciw": "0", "ab_proactive_download_popup_delay": "60"};
+        ServerData.members = null;
+        ServerData.community.listedStatus = 2
+        ServerData.community.templateId = 3
+</script> 
+<!-- Google and TEA Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31833046-14"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31833046-14');
+</script> <script>
+  // [AM-4739] Fix bug that says that "collectTEA" is not defined for window
+  window.collectTEA = (...args) => {
+    // Do nothing here, just make sure it exists
+  };
+
+  function sendPageView() {
+    gtag('event', 'page_view', {
+      page_location: location.href
+    });
+  }
+  sendPageView();
+</script> 
+<script src="//wa1.aminoapps.com/static/dist/js/main.6eaed38cd.js"></script>
+<div id="gdpr-cookie-consent"> <h3>Cookie Policy </h3> <p>  This website saves cookies to your browser in order to improve your online experience and show you personalized content. Read our <a class="link" href="http://aminoapps.com/privacy" target="_blank">Privacy Policy</a> and <a class="link" href="https://support.aminoapps.com/hc/en-us/articles/360004040313-Does-Amino-use-cookies-on-its-website-" target="_blank">Cookie Policy</a> to get more information and learn how to set up your preferences. </p> <button class="confirm-close" onclick="closeGDPRCookie()">Accept</button> </div> <script>
+function closeGDPRCookie() {
+    document.cookie = 'gdpr_cookie_agreee=1;max-age=31536000;path=/';
+    var consent = document.querySelector('#gdpr-cookie-consent');
+    consent.parentNode.removeChild(consent);
+}
+</script> <style>
+#gdpr-cookie-consent {
+    position: fixed;
+    padding: 14px;
+    font-size: 13px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    bottom: 8px;
+    right: 87px;
+    max-width: 410px;
+    color: #1a1a1a;
+    z-index: 5005;
+    /*1145141919810;
+    $z-global-modal: 5010;
+    */
+}
+#gdpr-cookie-consent > h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+}
+#gdpr-cookie-consent .close {
+    float: right;
+    color: #bdbdbd;
+    font-size: 20px;
+    line-height: 16px;
+}
+#gdpr-cookie-consent .link {
+    color: #0F86FF;
+}
+#gdpr-cookie-consent > p {
+    margin: 0;
+    margin-top: 8px;
+    line-height: 15px;
+}
+#gdpr-cookie-consent > .confirm-close {
+    background: none;
+    border: 1px solid #979797;
+    outline: none;
+    border-radius: 8px;
+    float: right;
+    padding: 8px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.not-mobile #gdpr-cookie-consent > .confirm-close:hover {
+    background: #f1f1f1;
+}
+@media (max-width: 640px) {
+#gdpr-cookie-consent {
+    left: 0;
+    right: -1px;
+    bottom: 50px;
+    border-radius: 0;
+    max-width: none;
+}
+}
+</style> 
+</body>
+<footer>
+  <!-- Quantcast Tag --> <script type="text/javascript">
+    var _qevents = _qevents || [];
+    (function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    })();
+    _qevents.push({
+    qacct: "p-3bDtRer0SSNWT",
+    uid: "ops@medialab.la"
+    });
+</script> <noscript>
+    <div style="display:none;">
+    <img src="//pixel.quantserve.com/pixel/p-3bDtRer0SSNWT.gif" border="0" height="1" width="1" alt="Quantcast"/>
+    </div>
+</noscript> <!-- The core Firebase JS SDK is always required and must be listed first --> <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script> <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries --> <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script> <script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDUbgzJwO1Fd5oawjcV3x8HkWGHET-Ky8Q",
+    authDomain: "golden-shine-845.firebaseapp.com",
+    databaseURL: "https://golden-shine-845.firebaseio.com",
+    projectId: "golden-shine-845",
+    storageBucket: "golden-shine-845.appspot.com",
+    messagingSenderId: "641940763521",
+    appId: "1:641940763521:web:26ac22ae145b37182d6e80",
+    measurementId: "G-9SJ4LCCH1X"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script> </footer>
+</html>

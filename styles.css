@@ -4,12 +4,21 @@
     box-sizing: border-box;
 }
 
+/* @font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto-Regular.ttf);
+} */
+
+body {
+    font-family: "Roboto";
+    font-size: 12px;
+}
+
 .container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 0.9fr 2.3fr 1fr;
     grid-template-rows: auto auto 1fr;
     min-height: 100vh;
-
 }
 
 .sidebar {
@@ -19,27 +28,70 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto 1fr;
     align-items: center;
-    gap: 50px;
-    padding: 25px;
+    gap: 40px;
+    padding: 1rem 1.5rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.logo-icon {
+    filter: invert(100%);
+    max-height: 1.5em;
+    margin-left: -8px;
+}
+
+.side-icon {
+    filter: invert(100%);
+    max-height: 1.5rem;
+}
+
+.menu, .menu2 {
+    color: white;
+}
+
+.menu-button {
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+    border: none;
+    background-color: rgb(25,146,211);
+    cursor: pointer;
 }
 
 ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
+
+li {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
 
 .search {
     grid-column: 2 / 4;
     background-color: white;
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-between;
+    grid-template-columns: 65% 35%;
     padding: 15px 30px;
     align-items: center;
 }
 
 .search-bar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    /* grid-template-columns: 2rem 1fr; */
     gap: 15px;
 }
 
@@ -48,14 +100,20 @@ input {
     border: none;
     border-radius: 20px;
     min-height: 20px;
+    flex: 1;
 }
 
 .search-right {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
-    /* justify-items: end; */
+    grid-template-columns: 2rem auto auto;
+    gap: 2rem;
+    justify-content: end; 
     align-items: center;
+}
+
+.morgan {
+    font-weight: 500;
+    font-size: 1.3rem;
 }
 
 .icon {
@@ -63,8 +121,10 @@ input {
 }
 
 .reddit {
+    min-height: 3rem;
+    width: 3rem;
     border-radius: 50%;
-    max-height: 30px;
+
 }
 
 .nav {
@@ -73,33 +133,59 @@ input {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    padding: 15px 30px;
+    padding: 15px 30px 20px;
     align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 80px);
+    gap: 1rem;
+    justify-content: end;
+}
+
+.nav-button {
+    border: none;
+    border-radius: 16px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white;
+    background-color: rgb(25,146,211);
+    padding: 8px 8px;
+    cursor: pointer;
+    max-width: 80px;
+    
 }
 
 .nav-left {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 10px;
+    grid-auto-rows: 10px;
     align-items: center;
     gap: 10px;
+}
+
+.greeting {
+    padding: 0px;
+    margin: 0px;
 }
 
 .reddit2 {
     grid-row: 1 / 3;
     border-radius: 50%;
-    max-height: 50px;
+    min-height: 3.5rem;
+    width: 4rem;
 }
 
 .content {
     grid-area: 3 / 2 / 4 / 3;
     background-color: #e2e8f0;
+    /* background-color: white; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr 1fr 1fr;
@@ -118,9 +204,36 @@ input {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: white;
     border-radius: 6px;
     padding: 15px;
+    border-left: solid 6px rgb(255,69,0);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2), 0px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.project-info {
+  /* Example styles */
+  color: rgb(109,109,109);
+  font-size: 1rem;
+}
+
+.card-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.star, .eye, .fork {
+    max-width: 2rem;
 }
 
 h3 {
@@ -129,4 +242,62 @@ h3 {
 
 .trending {
     padding-top: 15px;
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2), 0px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title2 {
+    font-weight: 500;
+    /* margin-bottom: 4px; */
+    font-size: 0.9rem;
+}
+
+.info2 {
+    color: rgb(109,109,109);
+    font-size: 0.7rem;
+}
+
+.card-trending {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2), 0px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profiles {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    justify-content: left;
+}
+
+.profile-text {
+    display: grid;
+    align-items: start;
+}
+
+.pfp {
+    max-height: 3rem;
+    min-width: 3rem;
+    border-radius: 50%;
+}
+
+hr {
+    border: solid 0.5px rgb(109,109,109);
+    margin: 0 -5px;
+}
+
+.hi {
+    font-weight: 500;
 }
